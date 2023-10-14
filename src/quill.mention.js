@@ -497,14 +497,12 @@ class Mention {
   }
 
   setIsOpen(isOpen) {
-    if (this.isOpen !== isOpen) {
-      if (isOpen) {
-        this.options.onOpen();
-      } else {
-        this.options.onClose();
-      }
-      this.isOpen = isOpen;
+    if (isOpen) {
+      this.options.onOpen();
+    } else {
+      this.options.onClose();
     }
+    this.isOpen = isOpen;
   }
 
   setMentionContainerPosition() {
